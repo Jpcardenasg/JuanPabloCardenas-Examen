@@ -26,6 +26,8 @@ homeButton.addEventListener( 'click', () => {
     customElements[ 0 ].classList.remove( 'hidden' );
 } );
 
+let imagesCount = 0;
+
 customElements.forEach( ( element, index ) => {
     if ( index < customElements.length - 1 ) {
         const images = element.querySelectorAll( '.section-images img' );
@@ -41,7 +43,12 @@ customElements.forEach( ( element, index ) => {
                 const formatedPrice = totalPrice.toLocaleString( 'es-ES' );
                 appSummary.render( formatedPrice );
 
-                postData();
+
+                imagesCount++;
+
+                if ( imagesCount === customElements.length - 1 ) {
+                    postData();
+                }
             } );
         } );
     }
