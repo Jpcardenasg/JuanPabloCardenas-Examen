@@ -21,11 +21,45 @@ export async function HTTPrequest( url, method, data = null ) {
     }
 }
 
+
+export async function getData() {
+    try {
+        const allData = await dataFetch( 'priceD', null, 'GET' );
+        return allData;
+    } catch ( error ) {
+        console.error( 'Error al recibir datos del servidor', error );
+    }
+}
+
 export async function postData( data ) {
     try {
-        // const data = { nombre: 'nombre', numContacto: 'numContacto', email: 'email', totalPrice };
         await dataFetch( 'priceD', null, 'POST', data );
     } catch ( error ) {
         console.error( 'Error al enviar datos al servidor', error );
     }
 }
+
+export async function deleteData( id ) {
+    try {
+        await dataFetch( 'priceD', id, 'DELETE' );
+    } catch ( error ) {
+        console.error( 'Error al eliminar los datos del servidor', error );
+    }
+}
+
+
+async function deleteAllItems() {
+    try {
+        const allData = await getData();
+
+        allData.forEach( async ( dato ) => {
+            await deleteData( dato.id );
+        } );
+
+        console.log( "Todos los elementos eliminados con éxito." );
+    } catch ( error ) {
+        console.error( "Error al eliminar los elementos:", error );
+    }
+}
+
+// deleteAllItems();

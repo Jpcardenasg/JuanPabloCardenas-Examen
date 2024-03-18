@@ -40,6 +40,7 @@ export class AppSummary extends HTMLElement {
 
         const finishButton = document.getElementById( 'finish-button' );
         const formData = document.querySelector( '#formData' );
+
         finishButton.addEventListener( "click", () => {
             formData.classList.toggle( 'hidden' );
         } );

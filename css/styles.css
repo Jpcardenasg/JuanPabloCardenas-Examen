@@ -26,7 +26,8 @@ body {
     align-items: center;
 }
 
-.main.hidden {
+.main.hidden,
+.form.hidden {
     display: none;
 }
 
@@ -212,19 +213,25 @@ body {
 
 
 /* FORM DATA */
+
+
 #formData {
+    position: absolute;
+    margin: auto;
+    background-color: #797777;
+    height: 50vh;
+    width: 50%;
+    z-index: 100;
+}
+
+#formInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
     gap: 40px;
-    margin: auto;
-    height: 50vh;
-    width: 50%;
-    z-index: 100;
-    background-color: #797777;
 }
+
 
 
 /* FORM DATA */

@@ -9,7 +9,7 @@ export class FormData extends HTMLElement {
 
     render( totalPrice ) {
         this.innerHTML = `
-            <form id="formData">
+            <form id="formInfo">
                 <fieldset>
                     <legend> Ingresa tu Nombre completo</legend>
                     <div class="input">
@@ -45,9 +45,7 @@ export class FormData extends HTMLElement {
         `;
 
 
-        console.log( totalPrice );
-
-        const form = this.querySelector( "#formData" );
+        const form = this.querySelector( "#formInfo" );
 
         form.addEventListener( "submit", async ( event ) => {
             event.preventDefault();
@@ -61,6 +59,8 @@ export class FormData extends HTMLElement {
             };
 
             await postData( data );
+
+
 
             location.reload();
         } );
