@@ -24,7 +24,7 @@ export class UserAuth extends HTMLElement {
                     <figcaption>No</figcaption>
                 </figure>
                 <figure>
-                    <img data-cost="350000" src="storage/images/answer-5-4.png" alt="">
+                    <img data-cost="3500000" src="storage/images/answer-5-4.png" alt="">
                     <figcaption>No lo sé todavía</figcaption>
                 </figure>
             </div>

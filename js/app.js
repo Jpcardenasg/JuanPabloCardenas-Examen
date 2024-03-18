@@ -1,5 +1,4 @@
 import { dataFetch } from "../Api/data-fetch.js";
-import { AppSummary } from "../App/Components/summary/summary.js";
 
 import '../App/Components/qualityLevel/qualityLevel.js';
 import '../App/Components/appType/appType.js';

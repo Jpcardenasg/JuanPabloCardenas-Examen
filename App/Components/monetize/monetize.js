@@ -24,7 +24,7 @@ export class AppMonetize extends HTMLElement {
                     <figcaption>Compras dentro de la app</figcaption>
                 </figure>
                 <figure>
-                    <img data-cost="350000" src="storage/images/answer-4-4.png" alt="">
+                    <img data-cost="3500000" src="storage/images/answer-4-4.png" alt="">
                     <figcaption>Otros / No lo sé todavía</figcaption>
                 </figure>
             </div>
