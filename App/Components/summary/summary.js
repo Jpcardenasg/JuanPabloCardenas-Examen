@@ -34,9 +34,16 @@ export class AppSummary extends HTMLElement {
                     <span class="text-cost">${totalPrice} COP</span>
                 </div>
                 <p>En GBP contamos con los mejores <strong>desarrolladores de apps y webs</strong> para tu proyecto. Publica tu proyeco en GBP</p>
-                <button type="button" class="summary-button">Terminar</button>
+                <button id="finish-button" type="button" class="summary-button">Terminar</button>
             </div>
         `;
+
+        const finishButton = document.getElementById( 'finish-button' );
+        const formData = document.querySelector( '#formData' );
+        finishButton.addEventListener( "click", () => {
+            formData.classList.toggle( 'hidden' );
+        } );
+
     }
 }
 

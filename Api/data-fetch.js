@@ -20,3 +20,12 @@ export async function HTTPrequest( url, method, data = null ) {
         return await response.json();
     }
 }
+
+export async function postData( data ) {
+    try {
+        // const data = { nombre: 'nombre', numContacto: 'numContacto', email: 'email', totalPrice };
+        await dataFetch( 'priceD', null, 'POST', data );
+    } catch ( error ) {
+        console.error( 'Error al enviar datos al servidor', error );
+    }
+}
